@@ -29,7 +29,7 @@ import _ "github.com/olliephillips/shortcodes"
 
 Once installed, and with your Ponzu server application running, visit the Addons link and enable the add-on.
 
-##Implementing on a content item
+## Using with a content item
 
 In the content item, for example ```review```, override the hookable interface ```BeforeAPIResponse``` hook with something like the following:
 
