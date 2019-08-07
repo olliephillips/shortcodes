@@ -14,7 +14,7 @@ Replacements are sanitized and JSON escaped to prevent injection and the JSON ob
 
 Use the ```ponzu``` cli tool in your project to add the addon.
 
-```
+```bash
 ponzu add github.com/olliephillips/shortcodes
 ponzu build
 ponzu run
@@ -23,7 +23,7 @@ ponzu run
 As with all Ponzu addons, you must have the addon included as an import
 for it to be built into Ponzu server. In the short term you can do this to include in the your Ponzu server application:
 
-```
+```go
 import _ "github.com/olliephillips/shortcodes"
 ```
 
@@ -33,7 +33,7 @@ Once installed, and with your Ponzu server application running, visit the Addons
 
 In the content item, for example ```review```, override the hookable interface ```BeforeAPIResponse``` hook with something like the following:
 
-```
+```go
 func (r *Review) BeforeAPIResponse(res http.ResponseWriter, req *http.Request,      data []byte) ([]byte, error) {
 	var replaced []byte
 	replaced, err := shortcodes.Replace(data)
@@ -52,7 +52,7 @@ Similarly this hook expects a ```[]byte``` slice return in addition to the ```er
 
 On installation, a ```Shortcode``` content item is added, with the following implementation:
 
-```
+```go
 type Shortcode struct {
 	item.Item
 
