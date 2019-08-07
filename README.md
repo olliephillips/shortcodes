@@ -1,6 +1,6 @@
 # Shortcodes
 
-## A Ponzu CMS addon
+## A Ponzu CMS add-on
 
 Shortcodes allows content items to contain shortcode tags i.e ```[myshortcode]``` which can be automatically substituted with alternative at the point the content is served over the Ponzu Server API.
 
@@ -12,7 +12,7 @@ Replacements are sanitized and JSON escaped to prevent injection and the JSON ob
 
 ## Adding
 
-Use the ```ponzu``` cli tool in your project to add the addon.
+Use the ```ponzu``` cli tool in your project to add the add-on.
 
 ```bash
 ponzu add github.com/olliephillips/shortcodes
@@ -20,14 +20,14 @@ ponzu build
 ponzu run
 ```
 
-As with all Ponzu addons, you must have the addon included as an import
-for it to be built into Ponzu server. In the short term you can do this to include in the your Ponzu server application:
+As with all Ponzu add-ons, you must have the add-on included as an import
+for it to be built into Ponzu server. In the short term you can do the below to include in the add-on your Ponzu server application:
 
 ```go
 import _ "github.com/olliephillips/shortcodes"
 ```
 
-Once installed, and with your Ponzu server application running, visit the Addons link and enable the addon.
+Once installed, and with your Ponzu server application running, visit the Addons link and enable the add-on.
 
 ## Implementing on a content item
 
